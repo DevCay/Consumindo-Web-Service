@@ -1,21 +1,3 @@
-/*var amqp = require('amqplib/callback_api');
-
-amqp.connect('amqp://root:password@192.168.10.126:5672', function (err, conn) {
-    if(err){
-        console.log(err);
-        return;
-    }
-    conn.createChannel(function (err, ch) {
-        var q = 'hello';
-        var msg = 'Hello World 123!';
-        ch.assertQueue(q, { durable: false });     
-        ch.sendToQueue(q, new Buffer(msg));
-        console.log(" [x] Sent %s", msg);
-    });
-
-    // testing purposes
-    setTimeout(function () { conn.close(); process.exit(0) }, 500);
-});*/
 var express = require('express');
 var CEPService = require('./cep_service');
 var IPService = require('./ip_service');
